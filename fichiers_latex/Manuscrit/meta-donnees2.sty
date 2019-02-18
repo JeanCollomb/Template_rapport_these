@@ -1,0 +1,162 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                 meta-donnees style                  %%
+%%    pour produire la Page de Couverture des theses       %%
+%%      de l'Universite De Grenoble                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Fichier encodé au format UTF8          %%
+\NeedsTeXFormat{LaTeX2e}[2003/12/01]
+\ProvidesPackage{meta-donnees}[2011/02/25 v0.01]
+
+\DeclareOption{a4paper}
+   {\setlength\paperheight {297mm}%
+    \setlength\paperwidth  {210mm}}
+\ProcessOptions\relax
+
+\AtBeginDocument{\ifx\includegraphics\undefined\RequirePackage{graphicx}\fi%
+\ifx\colorbox\undefined\RequirePackage{color}\fi}
+
+%\long\def\Universite#1{\gdef\@Universite{#1}}
+%\def\@Universite{\includegraphics[width=9.36cm,clip]{logoUGA}}
+\long\def\Titre#1{\gdef\@Titre{#1}}
+\def\@Titre{}	   
+\long\def\Soustitre#1{\gdef\@Soustitre{#1}}
+\def\@Soustitre{}  
+%\long\def\Auteur#1{\gdef\@Auteur{#1}}
+%\def\@Auteur{}      
+\long\def\Resume#1{\gdef\@Resume{#1}}
+\def\@Resume{}      
+\long\def\Motscles#1{\gdef\@Motscles{#1}}
+\def\@Motscles{}      
+\long\def\Abstr#1{\gdef\@Abstr{#1}}
+\def\@Abstract{}      
+\long\def\Keywords#1{\gdef\@Keywords{#1}}
+\def\@Keywords{}      
+
+
+
+        
+%\newcommand{\@ThesisHeadt}{{\@Universite}}
+%\newcommand\ThesisHeadt[1]{\renewcommand{\@ThesisHeadt}{{#1}}}
+
+%\newcommand{\@ThesisOfUniversity}{Thèse de docteur de l'Université de Grenoble}
+%\newcommand\ThesisOfUniversity[1]{\renewcommand{\@ThesisOfUniversity}{{#1}}}
+
+%\newcommand{\@BookTitle}{Titre de l'ouvrage :}
+%\newcommand\BookTitle[1]{\renewcommand{\@BookTitle}{{#1}}}
+
+\newcommand{\@ThesisTitlet}{{\@Titre}}
+\newcommand\ThesisTitlet[1]{\renewcommand{\@ThesisTitlet}{{#1}}}
+
+\newcommand{\@ThesisSubTitlet}{{\@Soustitre}}
+\newcommand\ThesisSubTitlet[1]{\renewcommand{\@ThesisSubTitlet}{{#1}}}
+
+%\newcommand{\@TitleAuthor}{{Présentée par :}}
+%\newcommand\TitleAuthor[1]{\renewcommand{\@TitleAuthor}{{#1}}}
+
+%\newcommand{\@ThesisAuthort}{{\@Auteur}}
+%\newcommand\ThesisAuthort[1]{\renewcommand{\@ThesisAuthort}{{#1}}}
+
+\newcommand{\@TitleResume}{{Résumé}}
+\newcommand\TitleResume[1]{\renewcommand{\@TitleResume}{{#1}}}
+
+\newcommand{\@ThesisResume}{{\@Resume}}
+\newcommand\ThesisResume[1]{\renewcommand{\@ThesisResume}{{#1}}}
+
+\newcommand{\@TitleMotsCles}{{Mots-clés :}}
+\newcommand\TitleMotsCles[1]{\renewcommand{\@TitleMotsCles}{{#1}}}
+
+\newcommand{\@ThesisMotsCles}{{\@Motscles}}
+\newcommand\ThesisMotsCles[1]{\renewcommand{\@ThesisMotsCles}{{#1}}}
+
+\newcommand{\@TitleAbstract}{{Abstract}}
+\newcommand\TitleAbstract[1]{\renewcommand{\@TitleAbstract}{{#1}}}
+
+\newcommand{\@ThesisAbstract}{{\@Abstr}}
+\newcommand\ThesisAbstract[1]{\renewcommand{\@ThesisAbstract}{{#1}}}
+
+\newcommand{\@TitleKeywords}{{Keywords :}}
+\newcommand\TitleKeywords[1]{\renewcommand{\@TitleKeywords}{{#1}}}
+
+\newcommand{\@ThesisKeywords}{{\@Keywords}}
+\newcommand\ThesisKeywords[1]{\renewcommand{\@ThesisKeywords}{{#1}}}
+
+\newcommand{\@UniversityLogot}{\includegraphics[height=28cm]{logo_Univ_Grenoble_V}}
+\newcommand\UniversityLogot[1]{\renewcommand{\@UniversityLogot}{{#1}}}
+
+\newcommand\@UGthesepaget@height{28cm}
+\newcommand\@UGthesepaget@width{19.3cm}
+\newlength\@UGTtitlepageshiftt
+
+\newlength\@Sethpageshiftt
+\setlength\@Sethpageshiftt{-5.5mm}
+\newcommand\Sethpageshiftt[1]{\setlength\@Sethpageshiftt{#1}}
+\newlength\@Setvpageshiftt
+\setlength\@Setvpageshiftt{-15.5mm}
+\newcommand\Setvpageshiftt[1]{\setlength\@Setvpageshiftt{#1}}
+
+
+\newcommand{\MakeUGthesePDC}{%
+            \newpage
+            \setlength\@UGTtitlepageshiftt{\paperwidth}%
+            \addtolength\@UGTtitlepageshiftt{-\@UGthesepaget@width}%
+            \divide\@UGTtitlepageshift2
+            \addtolength\@UGTtitlepageshiftt{-1in}
+            \thispagestyle{empty}
+            \vglue-\topmargin
+            \vglue-\headheight
+            \vglue-\headsep
+            \vglue-\footskip
+            \vglue\@Setvpageshiftt
+            \hglue-\ifodd\c@page\oddsidemargin\else\evensidemargin\fi
+            \hglue\@UGTtitlepageshiftt
+            \hglue-\parindent
+            \hglue\@Sethpageshiftt
+            \rlap{\vbox to0pt{\vbox to\@UGthesepaget@height
+            {\hsize\@UGthesepaget@width
+            \fontfamily{phv}\fontsize{11}{13}\selectfont\@Thesis@titlep@get}
+                        \vss
+                       }
+                 }\par
+            }
+
+\newcommand\@Thesis@titlep@get{\fboxsep=0pt
+\fbox{{\parbox[t][28cm][b]{5.6cm}{\hfil\@UniversityLogot\hfil\par}}\hskip5mm\parbox[t][28cm]{12.9cm}{
+
+\vskip2mm plus1fil
+ {\bfseries\fontsize{19}{19}\selectfont\@ThesisTitlet}
+
+\vskip2mm plus1fil
+{\fontsize{15}{16}\selectfont\@ThesisSubTitlet}
+
+%\vskip1mm plus1fil
+{\rule{5cm}{1pt}}
+
+\vskip5mm plus1fil
+{\bfseries\fontsize{16}{16}\selectfont\@TitleResume}
+
+\vskip2mm plus1fil
+\fontsize{10}{11}\selectfont\@ThesisResume
+
+\vskip3mm plus1fil
+{\bfseries\fontsize{16}{16}\selectfont\@TitleMotsCles}
+\@ThesisMotsCles
+
+%\vskip1mm plus2fil
+\rule{5cm}{1pt}
+
+\vskip5mm plus1fil
+{\bfseries\fontsize{16}{16}\selectfont\@TitleAbstract}
+
+\vskip2mm plus1fil
+\fontsize{10}{11}\selectfont\@ThesisAbstract
+
+\vskip3mm plus1fil
+{\bfseries\fontsize{16}{16}\selectfont\@TitleKeywords}
+\@ThesisKeywords
+
+\vskip5mm plus1fil
+                      }\hskip3mm
+    }
+         }
+%
+\endinput

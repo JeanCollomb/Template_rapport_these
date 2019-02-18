@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         FORMAT PERSONNALISES                           %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%       Page setup (see page 204 of the Latex Companion)        %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Sets the origin of the page to the top left corner
+\setlength{\voffset}{-1in}
+\setlength{\hoffset}{-1in}
+
+% Parameters to modify:
+
+% Width parameters
+\setlength{\oddsidemargin}{3cm} %Valeur des marges pages impaires mettre 4cm
+\setlength{\evensidemargin}{3cm} %Valeur des marges pages paires mettre 2cm
+\setlength{\textwidth}{15cm} %Largeur du texte 15cm il reste donc 6cm pour les marges droite et gauches
+
+% Hight parameters
+%\setlength{\topmargin}{2cm}
+\setlength{\topmargin}{1.3cm}
+\setlength{\headheight}{28pt} %Permet de caser deux lignes de 12pt de haut dans l'entete
+\setlength{\headsep}{0.5cm}
+\setlength{\textheight}{24.5cm}
+\setlength{\footskip}{1.3cm}
+
+% Margin note parameters
+\setlength{\marginparsep}{0cm}
+\setlength{\marginparwidth}{0cm}
+\setlength{\marginparpush}{0cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      Your fancy heading                    %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\pagestyle{Glenn}
+\pagestyle{fancy}			% Format de les lignes haut de page
+%\renewcommand{\chaptermark}[1]{\markright{\chaptername\ \thechapter.\ #1}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}{}}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lhead[\fancyplain{}{\leftmark}]%Pour les pages paires \bfseries
+      {\fancyplain{}{}} %Pour les pages impaires
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%Pour les pages paires 
+      {\fancyplain{}{\rightmark}}%Pour les pages impaires \bfseries
+\lfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\cfoot[\fancyplain{}{\thepage}]%\bfseries
+      {\fancyplain{}{\thepage}} %\bfseries
+\rfoot[\fancyplain{}{}]%
+     {\fancyplain{}{\scriptsize}}
+
+
+%% Draws a solid line at the head and foot of the document
+\renewcommand\headrulewidth{1pt}
+\renewcommand\footrulewidth{1pt}
+%\renewcommand{\headrule}{{\color{myblue3}}}
+%\renewcommand{\footrule}{{\color{myblue3}}}
+
+% Change la couleur des lignes d'entete et de bas de page
+%\renewcommand{\headrule}{{\color{violet1} \hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}}
+%\renewcommand{\footrule}{{\color{violet1} \hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}}
+
+%\newcommand{\parttoccolor}{blue}
+%\newcommand{\chaptertoccolor}{red}
+%\newcommand{\sectiontoccolor}{green!70!black}
+
+%\makeatletter
+%\renewcommand*\l@part[2]{%
+%  \ifnum \c@tocdepth >-2\relax
+%    \addpenalty{-\@highpenalty}%
+%    \addvspace{2.25em \@plus\p@}%
+%    \setlength\@tempdima{3em}%
+%    \begingroup
+%      \parindent \z@ \rightskip \@pnumwidth
+%      \parfillskip -\@pnumwidth
+%      {\leavevmode
+%       \large \bfseries \color{\parttoccolor}#1\hfil
+%       \hb@xt@\@pnumwidth{\hss
+%       \def\@linkcolor{\parttoccolor}#2}}\par
+%       \nobreak
+%         \global\@nobreaktrue
+%         \everypar{\global\@nobreakfalse\everypar{}}%
+%    \endgroup
+%  \fi}
+%\renewcommand*\l@chapter[2]{%
+%  \ifnum \c@tocdepth >\m@ne
+%    \addpenalty{-\@highpenalty}%
+%    \vskip 1.0em \@plus\p@
+%    \setlength\@tempdima{1.5em}%
+%    \begingroup
+%      \parindent \z@ \rightskip \@pnumwidth
+%      \parfillskip -\@pnumwidth
+%      \leavevmode \bfseries
+%      \advance\leftskip\@tempdima
+%      \hskip -\leftskip
+%      \color{\chaptertoccolor}#1\nobreak\
+%       \leaders\hbox{$\m@th
+%        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+%        mu$}\hfil\nobreak\hb@xt@\@pnumwidth{\hss
+%        \def\@linkcolor{\chaptertoccolor}#2}\par
+%      \penalty\@highpenalty
+%    \endgroup
+%  \fi}
+%\def\@dottedtocline#1#2#3#4#5{%
+%  \ifnum #1>\c@tocdepth \else
+%    \vskip \z@ \@plus.2\p@
+%    {\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+%     \parindent #2\relax\@afterindenttrue
+%     \interlinepenalty\@M
+%     \leavevmode
+%     \@tempdima #3\relax
+%     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+%     {#4}\nobreak
+%     \leaders\hbox{$\m@th
+%        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep
+%        mu$}\hfill
+%     \nobreak
+%     \hb@xt@\@pnumwidth{\hfil\normalfont #5}%
+%     \par}%
+%  \fi}
+%\renewcommand*\l@section{\color{\sectiontoccolor}\def\@linkcolor{\sectiontoccolor}\@dottedtocline{1}{1.5em}{2.3em}}
+%\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%        Here you set the space between the main text           %%%%%%
+%%%%%                and the start of the footnote                  %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtolength{\skip\footins}{5mm}
+
+
+% * Pour augmenter l'espace avant une section, apres le titre il suffit, par
+% exemple, d'écrire, dans le préambule du document :
+
+%%%% debut macro %%%%
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}% 
+	{2cm \@plus -1ex \@minus -.2ex}%
+	{2.3ex \@plus.2ex}%
+	{\reset@font\Large\bfseries}}
+\makeatother
+%%%% fin macro %%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                     Tableaux                               %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Taille des lignes epaisses tableau ( pour toprule)
+\setlength {\heavyrulewidth }{0.14 em}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                     Spacing for the lists                  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %\FrenchItemizeSpacingfalse %%% permet d'avoir un espace entre la fin d'un paragraphe et le début de la liste (\topsep ne marche pas)
+ %\FrenchListSpacingfalse
+
+

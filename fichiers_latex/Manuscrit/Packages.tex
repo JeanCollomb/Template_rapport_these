@@ -1,0 +1,163 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %                            PAQUETS USUELS                              %
+% %                                                   %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+\usepackage[french]{babel}  % francais = french babel
+\usepackage{meta-donnees} % page de garde
+\usepackage{meta-donnees2} %page de 4ième de couv
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{array}	
+\usepackage{color}
+\usepackage{cite}
+\usepackage{xfrac}
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\usepackage{esvect}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{sistyle}
+\usepackage{eurosym}  %pour obtenir le symbole Euro
+%\usepackage{gensymb} %pour obtenir le symbole \degree
+\usepackage{calligra}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,backgrounds,fadings,shadows.blur,shadows}
+\usetikzlibrary{fit,shapes.misc}
+
+\usepackage{animate}
+
+\usepackage{blindtext}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%           Packages pour les entetes et pied de page           %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{picins}
+\usepackage{fancyhdr}
+%\usepackage{psboxit}  %%% A Inserer avant babel !!!! 
+\usepackage{pifont}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                   Packages et couleurs perso                  %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{xcolor}  %%% Incompatibilité avec \usepackage{colortbl} ??????
+\definecolor{BleuCyan}{RGB}{0,190,190}  %%% Définition d'une couleur personnelle
+\definecolor{RoseRose}{RGB}{238,44,44}
+\definecolor{VertVert}{RGB}{10,255,118}
+\definecolor{Anthracite}{RGB}{91,124,151}
+\definecolor{GrisPasTropClair}{RGB}{83,135,135}
+\definecolor{BleuPetrole}{RGB}{0, 0 ,205}
+\definecolor{BleuClair}{RGB}{234, 255 ,255}
+\definecolor{Bleu1}{RGB}{26, 64 ,145}
+\definecolor{Rouge1}{RGB}{215, 19 ,24}
+\definecolor{myblue}{rgb}{.8, .8, 1}
+\definecolor{violet1}{rgb}{0.78,0.53,0.97}
+\definecolor{myblue2}{rgb}{0,0.41,0.54} % dark blue
+\definecolor{myred}{RGB}{192,0,0} % dark red
+\definecolor{mygreen2}{RGB}{0,120,0} % dark green
+\definecolor{myblue3}{HTML}{1a4091} % dark blue 	
+\definecolor{couleur_marie}{RGB}{0,102,204} % dark green
+
+
+
+
+
+%\newcommand*\maboite[1]{%
+%\fcolorbox{GrisPasTropClair}{BleuClair}{\hspace{1em}#1\hspace{1em}}}
+%\newcommand{\parttoccolor}{blue}
+%\newcommand{\chaptertoccolor}{red}
+%\newcommand{\sectiontoccolor}{green!70!black}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%            Packages pour les captions optimisés               %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[font=small,font={it}]{caption} % \usepackage[small,hang]{caption2} apparement cpation2 est obsolette
+%\captionsetup[table]{position=bottom}
+%\renewcommand{\captionfont}{\it \small}
+%\renewcommand{\captionlabelfont}{\it \bf \small}
+% \renewcommand{\captionlabeldelim}{ :}  % Ne marche qu'avec caption2
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%           Packages pour les titres de chapitres               %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[Bjornstrup]{fncychap}
+\usepackage[avantgarde]{quotchap}
+
+\usepackage{lettrine}    %Lettrine exemple: \lettrine[lines=2]{L}{orem ipsum}
+\usepackage[francais]{minitoc}		% Pour ajouter une table des matières à chaque chapitre
+\setcounter{minitocdepth}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                Packages pour les figures                      %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{epsfig}
+\usepackage{wrapfig}  %%% Inserer du texte a droite ou à gauche de l'image
+%\usepackage{picins}  %%% Inserer du texte a droite ou à gauche de l'image
+\usepackage{float}
+\usepackage{graphicx}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                  Packages pour les tableaux                   %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{colortbl}  %%% Couleurs de cellule de tableau
+\usepackage{longtable}
+\usepackage{lscape}    %%% Rotation des tableaux
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{slashbox}
+\usepackage{pifont}
+%\usepackage[table]{xcolor}
+
+\usepackage{colortbl}
+
+\arrayrulecolor{myblue3}
+\let\oldtabular=\tabular 
+\def\tabular{\small\oldtabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                  Packages pour les maths                  %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{bm}
+
+%\usepackage{empheq} % Pour encadrer les equations
+%pour utiliser plusieurs fichiers bibteX
+%\usepackage{biblist}
+
+
+
+%\usepackage{fourier}
+\usepackage{SIunits}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%              Packages pour les liens hypertexte               %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{hyperref} %%%  Packages pour les liens hypertexte a mettre après tous les autres packages
+ \hypersetup{
+ colorlinks=true,
+ %linkcolor=BleuCyan,
+ linkcolor=couleur_marie,
+ citecolor=BleuPetrole,
+ filecolor=VertVert
+ }
+ 
+%  hyperindex=true,

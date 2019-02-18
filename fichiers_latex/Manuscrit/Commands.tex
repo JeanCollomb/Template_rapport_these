@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       COMMANDES PERSONNALISEES                         %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      noheadernofoot                        %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\noheadernofoot{
+\renewcommand\footrulewidth{0pt}
+\renewcommand\headrulewidth{0pt}
+\lhead[\fancyplain{}{}]%Pour les pages paires \bfseries
+      {\fancyplain{}{}} %Pour les pages impaires
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%Pour les pages paires 
+      {\fancyplain{}{}}%Pour les pages impaires \bfseries
+\cfoot[\fancyplain{}{}]%\bfseries
+      {\fancyplain{}{}} %\bfseries
+}
+%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      pageblanche                           %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\pageblanche{
+\newpage
+\renewcommand\footrulewidth{0pt}
+\renewcommand\headrulewidth{0pt}
+\null
+\newpage
+}
+%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      pageblanchenoheader                   %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\pageblanchenoheader{
+%%%%%% Insertion page blanche
+\newpage
+%%%%%% Suppression des entêtes et pieds de pages
+\renewcommand\footrulewidth{0pt}
+\renewcommand\headrulewidth{0pt}
+\lhead[\fancyplain{}{}]%Pour les pages paires \bfseries
+      {\fancyplain{}{}} %Pour les pages impaires
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%Pour les pages paires 
+      {\fancyplain{}{}}%Pour thles pages impaires \bfseries
+\cfoot[\fancyplain{}{}]%\bfseries
+      {\fancyplain{}{}} %\bfseries
+%%%%%% Page vide
+\null
+%%%%%% fin de page blanche
+\newpage
+%%%%%% Remise des entetes et pieds de page pour la page suivante
+\renewcommand\headrulewidth{0.5pt}
+\renewcommand\footrulewidth{0.5pt}
+\lhead[\fancyplain{}{\leftmark}]%Pour les pages paires \bfseries
+      {\fancyplain{}{}} %Pour les pages impaires
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%Pour les pages paires 
+      {\fancyplain{}{\rightmark}}%Pour les pages impaires \bfseries
+\cfoot[\fancyplain{}{\thepage}]%\bfseries
+      {\fancyplain{}{\thepage}} %\bfseries
+%%%%%%
+}
+%%%%%%
+
+
+
+
+% Insertion d'une page blanche
+\newcommand{\insertblankpage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+
+% Divers modififications
+\newcommand*\rot{\rotatebox[origin=c]{90}}
+\newcommand*\kapton{Kapton\textsuperscript{\textregistered}}
+\newcommand{\ie}{\textit{i}.\textit{e}.}
+\newcommand*\rott{\rotatebox[origin=c]{135}}
+\newcommand*\rottt{\rotatebox[origin=c]{225}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%              Rename Fig. and Tab. in  caption              %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\figurename}{Figure}  %Changement de Fig. en Figure
+\renewcommand{\tablename}{Table}  %Changement de Tab. en Tableau
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                          Options                           %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\LettrineFontHook}{\color[gray]{0.3} \calligra}
+\renewcommand{\arraystretch}{1.5}
+
+%% ligne chapitre
+
+\newcommand\lignechap{
+%%%%%% Insertion page blanche
+\newpage
+%%%%%% Suppression des entêtes et pieds de pages
+\renewcommand\headrulewidth{0.5pt}
+\renewcommand\footrulewidth{0.5pt}
+\lhead[\fancyplain{}{\leftmark}]%Pour les pages paires \bfseries
+      {\fancyplain{}{}} %Pour les pages impaires
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%Pour les pages paires 
+      {\fancyplain{}{\rightmark}}%Pour les pages impaires \bfseries
+\cfoot[\fancyplain{}{\thepage}]%\bfseries
+      {\fancyplain{}{\thepage}} %\bfseries
+      }

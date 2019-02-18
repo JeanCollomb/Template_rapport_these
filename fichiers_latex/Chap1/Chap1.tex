@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                         CHAPITRE 1                            %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lhead[\fancyplain{}{\leftmark}]%Pour les pages paires \bfseries
+      {\fancyplain{}{}} %Pour les pages impaires
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%Pour les pages paires 
+      {\fancyplain{}{\rightmark}}%Pour les pages impaires \bfseries
+\lfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\cfoot[\fancyplain{}{\thepage}]%\bfseries
+      {\fancyplain{}{\thepage}} %\bfseries
+\rfoot[\fancyplain{}{}]%
+     {\fancyplain{}{\scriptsize}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      Start part here                          %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Titre 1}
+\label{ch:1}
+
+%==============================================================================	Résumé du chapitre
+
+\begin{center}
+\rule{0.7\linewidth}{.5pt}
+\begin{minipage}{0.7\linewidth}
+\smallskip
+
+\textit{Résumé du chapitre possible ici.
+}
+
+%\smallskip
+\end{minipage}
+\smallskip
+\rule{0.7\linewidth}{.5pt}
+\end{center}
+
+\minitoc
+\newpage
+
+
+\section{Exemples}
+\subsection{Références}
+
+Exemple de citation \cite{Collomb2017}, ou là \cite{Collomb2018b}, ou ici \cite{Collomb2018a,Collomb2017a,Collomb2018}. \\
+
+
+\FloatBarrier
+\subsection{Figures}
+
+La Figure~\ref{figure_simple} est un exemple d'intégration d'une figure simple. \\
+
+\begin{figure}[hbtp]
+	\centering
+	\def\svgwidth{1\columnwidth}
+	\fontsize{10pt}{10pt}\selectfont\input{../Chap1/Figure/Figure_1.pdf_tex}
+	\caption{Exemple de figure simple}
+	\label{figure_simple}
+\end{figure}
+
+
+La Figure~\ref{figure_multiple} est un exemple d'intégration d'une figure multiple. \\
+Il est bien entendu possible de faire référence à la Figure~\ref{figure_subplot} ou à la Figure~\ref{figure_polaire}.
+
+\begin{figure}[hbtp]
+	\centering
+	\begin{subfigure}[b]{0.8\textwidth}
+		\centering
+		\def\svgwidth{\columnwidth}
+		\fontsize{10pt}{10pt}\selectfont\input{../Chap1/Figure/Figure_2.pdf_tex}
+		\caption{Exemple subplot} 
+		\label{figure_subplot}
+	\end{subfigure}
+	\qquad
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\def\svgwidth{\columnwidth}
+		\fontsize{10pt}{10pt}\selectfont\input{../Chap1/Figure/Figure_3.pdf_tex}
+		\caption{Exemple diagramme polaire} 
+		\label{figure_polaire}
+	\end{subfigure}
+	\caption{Exemple de Figures multiple} 
+	\label{figure_multiple}
+\end{figure}
+
+
+
+\FloatBarrier
+\subsection{Tableaux}
+
+Générateur en ligne \href{http://www.tablesgenerator.com/latex_tables}{ici}. \\
+
+Un exemple de tableau générée par cet outil est présenté Table~\ref{tableau_exemple}.
+
+\begin{table}[]
+\centering
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+                               & \textbf{A}                 & \textbf{B} & \textbf{C} \\ \hline
+\multicolumn{1}{|c|}{$\alpha$} & \multicolumn{3}{c|}{\textit{fusion}}                 \\ \hline
+\multicolumn{1}{|c|}{$\beta$}  & \multirow{2}{*}{\textit{}} & \textit{1} & \textit{2} \\ \cline{1-1} \cline{3-4} 
+\multicolumn{1}{|c|}{$\Delta$} &                            & \textit{3} & \textit{4} \\ \hline
+\end{tabular}
+\caption{Exemple de tableau}
+\label{tableau_exemple}
+\end{table}
+
+
+\FloatBarrier
+\section{Section 2}
+\subsection{Sous-section 1}
+\blindtext
+
+\subsection{Sous-section 2}
+\blindtext
